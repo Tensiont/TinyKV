@@ -13,8 +13,9 @@ import (
 type Engines struct {
 	// Data, including data which is committed (i.e., committed across other nodes) and un-committed (i.e., only present
 	// locally).
-	Kv     *badger.DB
-	KvPath string
+	Kv     *badger.DB //存储引擎
+	KvPath string     //可能是磁盘存储路径
+
 	// Metadata used by Raft.
 	Raft     *badger.DB
 	RaftPath string
